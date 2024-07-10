@@ -1,0 +1,8 @@
+{
+  "/signin/page": "app/signin/page.js",
+  "/api/videos/route": "app/api/videos/route.js",
+  "/page": "app/page.js",
+  "/(dashboard)/upload/page": "app/(dashboard)/upload/page.js",
+  "/(dashboard)/user/page": "app/(dashboard)/user/page.js",
+  "/(dashboard)/assets/page": "app/(dashboard)/assets/page.js"
+}
