@@ -1,0 +1,29 @@
+service: s3trigger-api
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  environment:
+    API_ENDPOINT: ${env:API_ENDPOINT}
+
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin
+useDotenv: true
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi: "*"
+
+package:
+  excludeDevDependencies: true
+
+custom:
+  esbuild:
+    bundle: true
+    minify: false
+    sourcemap: true
+    target: node18
+    external: []
